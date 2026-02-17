@@ -66,3 +66,27 @@
     @apply bg-background text-foreground;
   }
 }
+
+@layer components {
+  .kanban-board {
+    @apply grid gap-4 md:grid-cols-3;
+  }
+  .kanban-column {
+    @apply rounded-lg border bg-card text-card-foreground shadow-sm;
+  }
+  .kanban-column-header {
+    @apply flex items-center justify-between border-b p-4;
+  }
+  .kanban-column-body {
+    @apply flex flex-col gap-3 p-4;
+  }
+  .kanban-task {
+    @apply rounded-md border bg-background p-3 shadow-sm transition-shadow hover:shadow-md;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
